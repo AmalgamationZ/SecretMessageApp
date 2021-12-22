@@ -1,0 +1,63 @@
+SecretMessageApp is a simple desktop application that takes in a text
+message or file and converts it into a mess of binary, or vice
+versa. It is a rather simple side project inspired by the encryption
+technology often showcased in sci-fi and spy thriller
+movies (though, of course, with a mere fraction of the complexity). It
+ goes without saying, but this application is not intended to be used
+ seriously (i.e. do not store sensitive information, like passwords,
+ usernames, etc).
+
+The application was built using OpenJDK 17 and JavaFX 17, utilizing
+the Maven framework to assist with app development and deployment.
+
+There are several uses for the app:
+
+A) Encode a message using the given input box.
+1. On the application, type in the message you desire. For example,
+type in, "Hello, World!"
+2. Click the "Encode" button near the bottom of the application. It
+should create a pop-up window that has the message in nonsense
+binary. The text is inside a selectable text box, so you can copy and
+paste it for your own benefit. If you typed in "Hello, World!", the
+output should be: "0110111 0011010 0010011 0010011 0010000 010011
+011111 0101000 0010000 0001101 0010011 0011011 011110 ".
+
+B) Decode a message using the given input box.
+1. Take any of the results from Part A (i.e. "0110111 0011010 0010011
+0010011 0010000 010011 011111 0101000 0010000 0001101 0010011 0011011
+011110 ") and type or paste it into the text box.
+2. Click the "Decode" button near the bottom of the application. It
+should create a pop-up window that has a readable message. The text
+is inside a selectable text box, so you can copy and paste it for
+your own benefit. The example in Step 1 should now become, "Hello,
+World!".
+
+C) Encode a message using a text file.
+0. Have a text file filled with text (i.e. make a "hello_world.txt"
+ file with the words "Hello, World!".
+1. Click the "Encode File" button on the bottom of the application.
+2. A file dialog will open, letting you choose a .txt file. Press
+"Open".
+3. A pop-up window should appear informing you that a save dialog will
+ open. Click "OK".
+4. A file dialog will open again, allowing you to save to a text file.
+ While technically it is possible to save as a different file, it is
+ recommended to simply use a .txt file extension (i.e. "encoded.txt").
+5. Press "Save"
+6. Open the file you just encoded in your computer (i.e. "encoded
+.txt"). The contents should be only 0's and 1's.
+
+D) Decode a message using a text file.
+0. Ensure that there is an encoded text file you had previously made
+(i.e. "encoded.txt" from Part C).
+1. Click the "Decode File" button on the bottom of the application.
+2. A file dialog will open, letting you choose a .txt file. Press
+"Open".
+3. A pop-up window should appear informing you that a save dialog will
+ open. Click "OK".
+4. A file dialog will open again, allowing you to save to a text file.
+ While technically it is possible to save as a different file, it is
+ recommended to simply use a .txt file extension (i.e. "decoded.txt").
+5. Press "Save".
+6. Open the file you just saved on your computer. If you followed the
+example, you should get, "Hello, World!".
