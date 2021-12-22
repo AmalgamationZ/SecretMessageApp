@@ -190,7 +190,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) {
         // welcome and instructions text
-        Text instructions = new Text("Welcome, operative! " +
+        Text instructions = new Text("Welcome! " +
                 "To encode a message," + " enter the message you " +
                 "wish to encode and " + "press the \"Encode\" " +
                 "Button.\n\n" + "To decode a message, enter the " +

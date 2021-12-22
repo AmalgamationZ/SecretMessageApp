@@ -61,3 +61,11 @@ D) Decode a message using a text file.
 5. Press "Save".
 6. Open the file you just saved on your computer. If you followed the
 example, you should get, "Hello, World!".
+
+NOTES:
+1. As stated above, this program is NOT intended for serious use (i.e.
+ saving passwords, usernames, etc). DO NOT SAVE SENSITIVE INFORMATION
+ WITH THIS PROGRAM. Use the program for fun!
+2. When decoding a message with the text box, please ensure only 0's
+and 1's are in the text area (i.e. do not put "" or letters in the
+text box when decoding). Doing so may lead to unexpected results.
