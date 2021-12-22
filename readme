@@ -69,3 +69,6 @@ NOTES:
 2. When decoding a message with the text box, please ensure only 0's
 and 1's are in the text area (i.e. do not put "" or letters in the
 text box when decoding). Doing so may lead to unexpected results.
+3. Currently the application only runs on the Windows operating
+system. Unfortunately, I am having trouble cross-compiling
+deliverables with the Maven tool (I don't believe it is possible).
