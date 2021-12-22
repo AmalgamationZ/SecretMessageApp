@@ -123,11 +123,21 @@ public class Conversion {
             // output string containing decoded message
             StringBuilder output = new StringBuilder();
 
+            // replaces new line characters with spaces
+            String newString = message.replaceAll("[\\t\\n\\r]+",
+                    " ");
+
             // splits message into separate binary numbers,
             // as each character is separated by space
-            String[] data = message.split(" ");
+            String[] data = newString.split(" ");
 
             for (String code : data) {
+                // checks for any newlines in the message to be
+                // encoded
+                if (code.equals("")) {
+                    continue;
+                }
+
                 // converts the binary back to
                 // character format
                 String binary = notOp(code);

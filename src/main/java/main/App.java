@@ -145,15 +145,41 @@ public class App extends Application {
         // original message
         String original = message.getText();
 
+        // doesn't show message dialog if
+        // input is invalid
+        if (!validateTextArea(original)) {
+            return;
+        }
+
         // encoded message
         String decoded = Conversion.decodeMessage(original);
 
         showAlert(decoded);
     }
 
+    private boolean validateTextArea(String message) {
+        // checks if text area only has white space
+        // or is empty
+        if (message.isEmpty() || message.isBlank()) {
+            showAlert("Please ensure you typed in alphanumeric " +
+                    "characters (for encoding)" +
+                    " or 0's/1's (for decoding)" +
+                    " in the text box!");
+            return false;
+        }
+
+        return true;
+    }
+
     private void showEncodedMessage(TextArea message) {
         // original message
         String original = message.getText();
+
+        // doesn't show message dialog if
+        // input is invalid
+        if (!validateTextArea(original)) {
+            return;
+        }
 
         // encoded message
         String encoded = Conversion.encodeMessage(original);
@@ -225,7 +251,7 @@ public class App extends Application {
         Scene scene = new Scene(vBox);
 
 
-        stage.setTitle("Sooper Secret App");
+        stage.setTitle("\"Super Secret\" App");
         stage.setScene(scene);
         stage.show();
     }
